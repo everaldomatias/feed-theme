@@ -1,0 +1,28 @@
+.app-header {
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        max-height: 40px;
+    }
+
+    .details {
+        button {
+            width: 2.5rem;
+            height: 2.5rem;
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
