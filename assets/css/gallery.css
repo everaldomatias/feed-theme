@@ -1,0 +1,69 @@
+#gallery-metabox-container {
+    background-color: #ecf0f1;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(auto-fit, 1fr);
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#gallery-metabox-container div {
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
+    border-radius: 1rem;
+    cursor: grab;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+#gallery-metabox-container div:hover {
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 6px 12px -2px, rgba(0, 0, 0, 0.1) 0px 3px 7px -3px;
+}
+
+#gallery-metabox-container div img {
+    max-width: inherit;
+    object-fit: cover;
+    width: 100%;
+}
+
+#gallery-metabox-container div .remove-image {
+    background-color: transparent;
+    border-radius: 40px;
+    box-sizing: border-box;
+    cursor: default;
+    display: block;
+    height: 26px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: all .2s ease-in-out;
+    width: 26px;
+}
+
+#gallery-metabox-container div .remove-image::after,
+#gallery-metabox-container div .remove-image::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 14px;
+    height: 3px;
+    background: white;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    top: 11px;
+    left: 6px
+}
+
+#gallery-metabox-container div .remove-image::after {
+    transform: rotate(-45deg)
+}
+
+#gallery-metabox-container div:hover .remove-image {
+    background-color: #C70039;
+}

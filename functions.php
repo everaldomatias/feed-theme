@@ -2,6 +2,9 @@
 
 namespace Feed;
 
+require_once( 'includes/enqueues.php' );
+require_once( 'includes/gallery.php' );
+
 function theme_setup() {
     add_theme_support( 'custom-logo', [
         'height'      => 100,
