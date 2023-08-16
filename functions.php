@@ -2,6 +2,7 @@
 
 namespace Feed;
 
+require_once( 'includes/api.php' );
 require_once( 'includes/enqueues.php' );
 require_once( 'includes/gallery.php' );
 
