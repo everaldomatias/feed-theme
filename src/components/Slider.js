@@ -2,7 +2,6 @@ import React from 'react'
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' 
 
-
 const Slider = ({imageUrls}) => {
 
     const [sliderRef, instanceRef] = useKeenSlider()
@@ -12,7 +11,6 @@ const Slider = ({imageUrls}) => {
             {
                 imageUrls.map((url, i) => (
                     <div key={i} className="keen-slider__slide">
-                        {console.log(url)}
                         <img src={url} />
                     </div>
                 ))

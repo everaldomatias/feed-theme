@@ -1,12 +1,13 @@
 .app-header {
+    align-items: center;
+    background-color: yellow;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
     position: sticky;
     top: 0;
-    background-color: yellow;
     width: 100%;
-    padding: .5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    z-index: 9;
 
     .logo {
         max-height: 40px;
