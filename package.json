@@ -24,6 +24,7 @@
         "build": "webpack --mode production"
     },
     "dependencies": {
+        "keen-slider": "^6.8.6",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     }

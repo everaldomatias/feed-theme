@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Slider from './Slider';
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(1);
+    const [postsPerPage] = useState(10);
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -28,9 +29,7 @@ const Posts = () => {
         <div>
             {posts.map(post => (
                 <div key={post.id}>
-                    <h2>{post.title.rendered}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
-                    <p>Gallery Image IDs: {post.gallery_image_urls}</p>
+                    <Slider imageUrls={post.gallery_image_urls} />
                 </div>
             ))}
             <button onClick={() => setCurrentPage(prev => prev - 1)}>Anterior</button>
